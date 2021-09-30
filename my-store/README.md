@@ -14,7 +14,7 @@ En la misma ubicacion, para generar un servidor de desarrollo:
 - ng serve
 
 Para lanzar el servidor de desarrollo y que abra el navegador con la direccion automaticamente:
--ng serve -o
+- ng serve -o
 
 Para elegir el puerto especifico en el que quieres que se aloje el servidor en localhost:
--ng serve -o --port=numero-que-quieras(Ej: --port=2000)
+- ng serve -o --port=numero-que-quieras(Ej: --port=2000)

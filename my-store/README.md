@@ -47,8 +47,9 @@ Dentro de estas llaves tambien pueden ir variables con algun valor definido ante
 ### Property Binding
 
 **Property Binding** es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
-  + Solo funcionan en una direccion desde la capa logica (conponent.ts) al objeto destino (atributo html), a esto se le conoce como flujo de datos.
-  Quiere decir que los parametros a utilizar se crean en Component.ts y se deben utilizar en el atributo html.
++ Solo funcionan en una direccion desde la capa logica (conponent.ts) al objeto destino (atributo html), a esto se le conoce como flujo de datos.
+
+Quiere decir que los parametros a utilizar se crean en Component.ts y se deben utilizar en el atributo html.
 
   #### EJ: Propiedad disabled de un boton
 

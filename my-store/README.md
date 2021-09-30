@@ -34,9 +34,11 @@ Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resu
         En esta linea se le agregaron 3 cosas:
 
         + 1. "{ { } }" para dar paso a utilizar alguna funcion de JavaScript
-        + 2. Antes, solo se escribía "hola mundo" en medio del tag `<h1>` pero ahora, con los corchetes puestos, es necesario definir como String, el "hola mundo" utilizando las comillas simples (' texto ').
+        + 2. Antes, solo se escribía "hola mundo" en medio del tag `<h1>` pero ahora, con las llaves puestas, es necesario definir como String, el "hola mundo" utilizando las comillas simples (' texto ').
         + 3. Y por ultimo, al poder ahora si utilizar JavaScript, se usó la funcion `.repeat()`, ya que ahora nos permite hacerlo. 
 
 #### - EJ2: Realizar una operacion matematica
 - La sintaxis es la siguiente `<p> 3 + 3 = {{ 3 + 3 }}</p>`
-    + Lo que se encuentra fuera de los corchetes "{{}}" se incorporará al parrafo como texto plano, pero lo que se encuentra dentro de este `{{ 3 + 3 }}` será devuelto como una funcion/resultado. En este caso, sería 6. Ademas, de que en nuestra pagina web, debería entregar lo siguiente: `3 + 3 = 6`
+    + Lo que se encuentra fuera de las llaves "{{}}" se incorporará al parrafo como texto plano, pero lo que se encuentra dentro de este `{{ 3 + 3 }}` será devuelto como una funcion/resultado. En este caso, sería 6. Ademas, de que en nuestra pagina web, debería entregar lo siguiente: `3 + 3 = 6`
+
+Dentro de estas llaves tambien pueden ir variables con algun valor definido anteriormente, para esto debes **ASEGURARTE** de que dichas variables sean publicas y esten disponibles para su uso.

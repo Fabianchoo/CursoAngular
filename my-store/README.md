@@ -23,8 +23,15 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 # Conceptos de TypeScript en Angular
 
 ### - String Interpolation
-Es la forma en que "{{}}" puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
+Es la forma en que "{ { } }" puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
 
 #### - EJ: Escribir "hola mundo"
 - Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
     + `<h1>hola mundo<h1>`
+
+    Pero una forma de hacerlo con TypeScript para utilizarlo dentro de alguna funcion sería:
+    +`<h1>{{'hola mundo'.repeat(5)}}<h1>`
+    En esta linea se le agregaron 3 cosas:
+        + 1) "{ { } }" para dar paso a utilizar alguna funcion de JavaScript
+        + 2) Antes, solo se escribía "hola mundo" en medio del tag `<h1>` pero ahora, con los corchetes puestos, es necesario definir como String, el "hola mundo" utilizando las comillas simples (' texto ').
+        + 3) Y por ultimo, al poder ahora si utilizar JavaScript, se usó la funcion `.repeat()`, ya que ahora nos permite hacerlo. 

@@ -27,4 +27,4 @@ Es la forma en que "{{}}" puedes realizar una operacion y obtener un resultado c
 
 #### - EJ: Escribir "hola mundo"
 - Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
-    <'h1'>hola mundo<'h1'>cacac
+    + `<h1>hola mundo<h1>`

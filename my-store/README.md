@@ -52,27 +52,27 @@ Dentro de estas llaves tambien pueden ir variables con algun valor definido ante
 
   #### EJ: Propiedad disabled de un boton
 
-    Una forma literal de desabilitar un boton, es de la siguiente manera:
+    + Una forma literal de desabilitar un boton, es de la siguiente manera:
 
-    ```html
-    {
-        <button disabled = "false"></button>
-    }
-    ```
-    Donde la propiedad HTML *disabled* está regida por ``"false"``.
+        ```html
+        {
+            <button disabled = "false"></button>
+        }
+        ```
+        Donde la propiedad HTML *disabled* está regida por ``"false"``.
 
-    Por otra parte, al utilizar **Property Binding**, lo que haremos será en el archivo de components crear una ``funcion booleana`` para definir el estado de *disabled*.
+        Por otra parte, al utilizar **Property Binding**, lo que haremos será en el archivo de components crear una ``funcion booleana`` para definir el estado de *disabled*.
 
-    ```javascript
-    {
-          btnDisabled = true;
-    }
-    ```
+            ```javascript
+            {
+                btnDisabled = true;
+            }
+            ```
     Para utilizar esta funcion dentro de una propiedad HTML, a dicha propiedad se debe "encerrar" dentro de corchetes [], así se puede dar paso a llamar, en este caso, a *btnDisabled*. Quedaría de la siguiente manera:
     
-    ```html
-    {
-        <button [disabled] = "btnDisabled"></button>
-    }
-    ```
+        ```html
+        {
+            <button [disabled] = "btnDisabled"></button>
+        }
+        ```
     Esto mismo se puede realizar con valores como nombre, edad e imagen como anteriormente se hizo.

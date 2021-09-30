@@ -64,7 +64,7 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 
    Por otra parte, al utilizar **Property Binding**, lo que haremos será en el archivo de components crear una ``funcion booleana`` para definir el estado de *disabled*.
 
-   ```Java
+   ```JavaScript
             
             btnDisabled = true;
             
@@ -76,4 +76,25 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
             <button [disabled] = "btnDisabled"></button>
         
    ```
-   Esto mismo se puede realizar con valores como nombre, edad e imagen como anteriormente se hizo.
+   Esto mismo se puede realizar con valores como nombre, edad, imagen y **objetos**.
+   
+   Un ejemplo de la realizacion de este procedimiento con un objeto sería el siguiente:
+   - Se crea un objeto en el archivo `app.components.ts` que es donde tenemos todos nuestras propiedades listas para ser utilizadas
+   
+   ```JavaScript
+   
+    persona = {
+    name: 'Fabian',
+    age: 18,
+    avatar: 'https://media.discordapp.net/attachments/516433396596211712/893168319966896168/ExT9Z8kWQAEHiak.png'}
+    
+   ```
+   - Como se puede ver, tenemos nombre, edad y una imagen dentro de un objeto **`Persona`**. Para utilizar estas propiedades, solo debemos añadir el objeto antes de la propiedad cuando se invocan. Quedaría de la siguiente manera:
+   
+   ```HTML
+      <input type="text" [value]="persona.name">
+      <progress max = "100" [value] ="persona.age"></progress>
+      <img [src]="persona.avatar">
+   ```
+   
+   

@@ -18,3 +18,5 @@ Para lanzar el servidor de desarrollo y que abra el navegador con la direccion a
 
 Para elegir el puerto especifico en el que quieres que se aloje el servidor en localhost:
 - ng serve -o --port=numero-que-quieras(Ej: --port=2000)
+
+

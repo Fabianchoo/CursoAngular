@@ -110,3 +110,7 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
     this.btnDisabled = false;}
 ```
 + Lo que haría esta funcion, sería cambiar el estado de un boton, de deshabilitado a habilitado cuando se registre un click sobre el button que lo capturará.
+
+### Data Binding con ngModel
+- Fusion entre escuchar un evento y "setear" una propiedad. Esto se realiza con la siguiente sintaxis: `[(ngModel)] = someValue`.
+- Sirve para hacer validaciones de los campos, como por ejemplo, `La edad debe ser mayor que x y menos que y` tambien sirve para "escuchar" o esperar algun cambio dentro de textBox, buttons o cualquier accionador para generar un cambio de manera automatica.

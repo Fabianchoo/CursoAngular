@@ -59,15 +59,15 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
         
             <button disabled = "false"></button>
         
-        ```
+   ```
    Donde la propiedad HTML *disabled* está regida por ``"false"``.
 
    Por otra parte, al utilizar **Property Binding**, lo que haremos será en el archivo de components crear una ``funcion booleana`` para definir el estado de *disabled*.
 
-   ```
-            
-                btnDisabled = true;
-            
+   ```Java
+            {
+            btnDisabled = true;
+            }
    ```
    Para utilizar esta funcion dentro de una propiedad HTML, a dicha propiedad se debe "encerrar" dentro de corchetes [], así se puede dar paso a llamar, en este caso, a *btnDisabled*. Quedaría de la siguiente manera:
     

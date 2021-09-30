@@ -42,8 +42,37 @@ Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resu
     + Lo que se encuentra fuera de las llaves "{{}}" se incorporará al parrafo como texto plano, pero lo que se encuentra dentro de este `{{ 3 + 3 }}` será devuelto como una funcion/resultado. En este caso, sería 6. Ademas, de que en nuestra pagina web, debería entregar lo siguiente: `3 + 3 = 6`
 
 Dentro de estas llaves tambien pueden ir variables con algun valor definido anteriormente, para esto debes **ASEGURARTE** de que dichas variables sean publicas y esten disponibles para su uso.
-```html
-{
-    <button disabled = "false"></button>
-}
-```
+
+
+### Property Binding}
+
+**Property Binding** es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
+  + Solo funcionan en una direccion desde la capa logica (conponent.ts) al objeto destino (atributo html), a esto se le conoce como flujo de datos.
+  Quiere decir que los parametros a utilizar se crean en Component.ts y se deben utilizar en el atributo html.
+
+  #### EJ: Propiedad disabled de un boton
+
+    Una forma literal de desabilitar un boton, es de la siguiente manera:
+
+    ```html
+    {
+        <button disabled = "false"></button>
+    }
+    ```
+    Donde la propiedad HTML *disabled* está regida por ``"false"``.
+
+    Por otra parte, al utilizar **Property Binding**, lo que haremos será en el archivo de components crear una ``funcion booleana`` para definir el estado de *disabled*.
+
+    ```javascript
+    {
+          btnDisabled = true;
+    }
+    ```
+    Para utilizar esta funcion dentro de una propiedad HTML, a dicha propiedad se debe "encerrar" dentro de corchetes [], así se puede dar paso a llamar, en este caso, a *btnDisabled*. Quedaría de la siguiente manera:
+    
+    ```html
+    {
+        <button [disabled] = "btnDisabled"></button>
+    }
+    ```
+    Esto mismo se puede realizar con valores como nombre, edad e imagen como anteriormente se hizo.

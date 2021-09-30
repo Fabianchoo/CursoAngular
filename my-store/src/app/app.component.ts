@@ -9,4 +9,5 @@ export class AppComponent {
   name = 'Fabian';
   age = 18;
   img = 'https://media.discordapp.net/attachments/516433396596211712/893168319966896168/ExT9Z8kWQAEHiak.png';
+  btnDisabled = true;
 }

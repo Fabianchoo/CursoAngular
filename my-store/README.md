@@ -23,9 +23,9 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 # Conceptos de TypeScript en Angular
 
 ### - String Interpolation
-Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
+- Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
 
-#### - EJ: Escribir "hola mundo"
+**- EJ: Escribir "hola mundo"**
 - Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
     + `<h1>hola mundo<h1>`
 
@@ -37,7 +37,7 @@ Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resu
         + 2. Antes, solo se escribía "hola mundo" en medio del tag `<h1>` pero ahora, con las llaves puestas, es necesario definir como String, el "hola mundo" utilizando las comillas simples (' texto ').
         + 3. Y por ultimo, al poder ahora si utilizar JavaScript, se usó la funcion `.repeat()`, ya que ahora nos permite hacerlo. 
 
-#### - EJ2: Realizar una operacion matematica
+- **EJ2: Realizar una operacion matematica**
 - La sintaxis es la siguiente `<p> 3 + 3 = {{ 3 + 3 }}</p>`
     + Lo que se encuentra fuera de las llaves "{{}}" se incorporará al parrafo como texto plano, pero lo que se encuentra dentro de este `{{ 3 + 3 }}` será devuelto como una funcion/resultado. En este caso, sería 6. Ademas, de que en nuestra pagina web, debería entregar lo siguiente: `3 + 3 = 6`
 
@@ -46,12 +46,12 @@ Dentro de estas llaves tambien pueden ir variables con algun valor definido ante
 
 ### Property Binding
 
-**Property Binding** es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
+- Property Binding es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
 + Solo funcionan en una direccion desde la capa logica (conponent.ts) al objeto destino (atributo html), a esto se le conoce como flujo de datos.
 
 Quiere decir que los parametros a utilizar se crean en Component.ts y se deben utilizar en el atributo html.
 
-  #### EJ: Propiedad disabled de un boton
+  **EJ: Propiedad disabled de un boton**
   
   Una forma literal de desabilitar un boton, es de la siguiente manera:
 
@@ -97,6 +97,16 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
       <img [src]="persona.avatar">
    ```
 
-###
-   
-   
+### Event Binding
+- Permiten escuchar y responder a las acciones del utuario, como pulsaciones de teclas, movimientos del mouse, clicks y toques. 
++ Para vincular un elemento **HTML** a un **evento**, debemos indicarlo de la siguiente manera ``(Nom_Evento)=nom_Funcion()``. Se vería algo así:
+
+  ```HTML
+    <button (click) = "toggleButton()">Toggle Button</button>
+  ```  
++ Y la funcion que se está llamando `"toggleButton()"` sería así:
+```JavaScript
+    toggleButton(){
+    this.btnDisabled = false;}
+```
++ Lo que haría esta funcion, sería cambiar el estado de un boton, de deshabilitado a habilitado cuando se registre un click sobre el button que lo capturará.

@@ -51,7 +51,7 @@ Dentro de estas llaves tambien pueden ir variables con algun valor definido ante
 
 Quiere decir que los parametros a utilizar se crean en Component.ts y se deben utilizar en el atributo html.
 
-   <center>#### EJ: Propiedad disabled de un boton</center>
+  #### EJ: Propiedad disabled de un boton
   
   Una forma literal de desabilitar un boton, es de la siguiente manera:
 

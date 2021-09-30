@@ -42,6 +42,8 @@ Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resu
     + Lo que se encuentra fuera de las llaves "{{}}" se incorporará al parrafo como texto plano, pero lo que se encuentra dentro de este `{{ 3 + 3 }}` será devuelto como una funcion/resultado. En este caso, sería 6. Ademas, de que en nuestra pagina web, debería entregar lo siguiente: `3 + 3 = 6`
 
 Dentro de estas llaves tambien pueden ir variables con algun valor definido anteriormente, para esto debes **ASEGURARTE** de que dichas variables sean publicas y esten disponibles para su uso.
+```html
 {
     <button disabled = "false"></button>
 }
+```

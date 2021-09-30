@@ -5,25 +5,25 @@ Proyecto generado con [Angular CLI] version 12.2.7. alojado en [http://localhost
 
 # Pasos para crear un proyecto
 Para ver a detalle las tecnologías utilizadas de Angular:
--ng version
+- ``ng version``
 
 Al estar dentro ya de la carpeta donde se realizará el desarrolo, para crear un nuevo proyecto se necesita utilizar el comando:    
-- ng new nombre-del-proyecto
+- ``ng new nombre-del-proyecto``
 
 En la misma ubicacion, para generar un servidor de desarrollo:
-- ng serve
+- ``ng serve``
 
 Para lanzar el servidor de desarrollo y que abra el navegador con la direccion automaticamente:
-- ng serve -o
+- ``ng serve -o``
 
 Para elegir el puerto especifico en el que quieres que se aloje el servidor en localhost:
-- ng serve -o --port=numero-que-quieras(Ej: --port=2000)
+- ``ng serve -o --port=numero-que-quieras(Ej: --port=2000)``
 
 
 # Conceptos de TypeScript en Angular
 
 ### - String Interpolation
-Es la forma en que "{ { } }" puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
+Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
 
 #### - EJ: Escribir "hola mundo"
 - Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:

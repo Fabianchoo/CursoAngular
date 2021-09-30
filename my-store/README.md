@@ -22,4 +22,9 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 
 # Conceptos de TypeScript en Angular
 
-### String Interpolation
+### - String Interpolation
+Es la forma en que "{{}}" puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
+
+#### - EJ: Escribir "hola mundo"
+- Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
+    [<h1>hola mundo<h1>]

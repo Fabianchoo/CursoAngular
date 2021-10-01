@@ -23,7 +23,7 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 
 # Conceptos de TypeScript en Angular
 
-### - String Interpolation
+### String Interpolation
 - Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
 
 - EJ: Escribir "hola mundo"
@@ -45,6 +45,7 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 Dentro de estas llaves tambien pueden ir variables con algun valor definido anteriormente, para esto debes **ASEGURARTE** de que dichas variables sean publicas y esten disponibles para su uso.
 
 <hr>
+
 ### Property Binding
 
 - Property Binding es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
@@ -98,6 +99,7 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
       <img [src]="persona.avatar">
    ```
 <hr>
+
 ### Event Binding
 - Permiten escuchar y responder a las acciones del utuario, como pulsaciones de teclas, movimientos del mouse, clicks y toques. 
 + Para vincular un elemento **HTML** a un **evento**, debemos indicarlo de la siguiente manera ``(Nom_Evento)=nom_Funcion()``. Se vería algo así:
@@ -112,10 +114,12 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 ```
 + Lo que haría esta funcion, sería cambiar el estado de un boton, de deshabilitado a habilitado cuando se registre un click sobre el button que lo capturará.
 <hr>
+
 ### Data Binding con ngModel
 - Fusion entre escuchar un evento y "setear" una propiedad. Esto se realiza con la siguiente sintaxis: `[(ngModel)] = someValue`.
 - Sirve para hacer validaciones de los campos, como por ejemplo, `La edad debe ser mayor que x y menos que y` tambien sirve para "escuchar" o esperar algun cambio dentro de textBox, buttons o cualquier accionador para generar un cambio de manera automatica.
 <hr>
+
 ### Uso de *ngIf
 - Es una ``Estructura de control`` que se realiza bajo la siguiente sintaxis:
 

@@ -221,4 +221,5 @@ Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad e
 - es una extencion para navegadores de internet que permite la depuracion u analisis mas profundo respecto a las paginas o localhost desarrollados con Angular.
 
 <hr>
-## Clases de Organizacion y Css (16, 17, 18, 19)
+
+# Clases de Organizacion y Css (16, 17, 18, 19)

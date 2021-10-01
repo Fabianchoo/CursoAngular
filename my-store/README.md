@@ -1,7 +1,7 @@
 # MyStore
 
 Proyecto generado con [Angular CLI] version 12.2.7. alojado en [http://localhost:4200/]
-
+<hr>
 
 # Pasos para crear un proyecto
 Para ver a detalle las tecnologías utilizadas de Angular:
@@ -19,7 +19,7 @@ Para lanzar el servidor de desarrollo y que abra el navegador con la direccion a
 Para elegir el puerto especifico en el que quieres que se aloje el servidor en localhost:
 - ``ng serve -o --port=numero-que-quieras(Ej: --port=2000)``
 
-
+<hr>
 # Conceptos de TypeScript en Angular
 
 ### - String Interpolation
@@ -43,7 +43,7 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 
 Dentro de estas llaves tambien pueden ir variables con algun valor definido anteriormente, para esto debes **ASEGURARTE** de que dichas variables sean publicas y esten disponibles para su uso.
 
-
+<hr>
 ### Property Binding
 
 - Property Binding es una forma de controlar dinamicamente (al igual que en String Interpolation) algunas propiedades de HTML de un objeto en la capa logica.
@@ -96,7 +96,7 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
       <progress max = "100" [value] ="persona.age"></progress>
       <img [src]="persona.avatar">
    ```
-
+<hr>
 ### Event Binding
 - Permiten escuchar y responder a las acciones del utuario, como pulsaciones de teclas, movimientos del mouse, clicks y toques. 
 + Para vincular un elemento **HTML** a un **evento**, debemos indicarlo de la siguiente manera ``(Nom_Evento)=nom_Funcion()``. Se vería algo así:
@@ -110,11 +110,11 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
     this.btnDisabled = false;}
 ```
 + Lo que haría esta funcion, sería cambiar el estado de un boton, de deshabilitado a habilitado cuando se registre un click sobre el button que lo capturará.
-
+<hr>
 ### Data Binding con ngModel
 - Fusion entre escuchar un evento y "setear" una propiedad. Esto se realiza con la siguiente sintaxis: `[(ngModel)] = someValue`.
 - Sirve para hacer validaciones de los campos, como por ejemplo, `La edad debe ser mayor que x y menos que y` tambien sirve para "escuchar" o esperar algun cambio dentro de textBox, buttons o cualquier accionador para generar un cambio de manera automatica.
-
+<hr>
 ### Uso de *ngIf
 - Es una ``Estructura de control`` que se realiza bajo la siguiente sintaxis:
 
@@ -149,3 +149,23 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 
 Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad es igual a 18 años, va a mostrar '55566644', **pero mientras no sea ese resultado**, mostrará el template #myBlock, en sí el texto `Bloque de else`.
 <hr>
+
+### Uso de *ngFor
+- Sirve para iterar un Array (Strings, numeros u objetos). Dicho Array **debe estar dentro de los componentes de tu codigo**, en este caso, debe estar dentro de `app.components.ts`. Su sintaxis es la siguiente:
+
+```html
+  <h1>*ngFor</h1>
+  <ul>
+    <li ngFor = "let name of names">
+      {{name}}
+    </li>
+  </ul>
+```
+
+- Donde **ngFor** se utiliza como una propiedad de html, se define lo siguiente: 
+
+  + `ngFor = let -se define una variable con let-`
+  + `name -nombre de la variable-`
+  + `of -de donde se extraeran los datos-` 
+  + `names -array creado con datos en su interior-`
+  + `{{name}} -con el nombre de la variable y mediante String Interpolation se utiliza-` 

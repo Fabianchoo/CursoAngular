@@ -156,7 +156,7 @@ Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad e
 ```html
   <h1>*ngFor</h1>
   <ul>
-    <li ngFor = "let name of names">
+    <li *ngFor = "let name of names">
       {{name}}
     </li>
   </ul>

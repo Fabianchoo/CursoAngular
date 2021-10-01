@@ -148,3 +148,4 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 ```
 
 Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad es igual a 18 años, va a mostrar '55566644', **pero mientras no sea ese resultado**, mostrará el template #myBlock, en sí el texto `Bloque de else`.
+<hr>

@@ -116,3 +116,22 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 - Sirve para hacer validaciones de los campos, como por ejemplo, `La edad debe ser mayor que x y menos que y` tambien sirve para "escuchar" o esperar algun cambio dentro de textBox, buttons o cualquier accionador para generar un cambio de manera automatica.
 
 ### Uso de *ngIf
+- Es una ``Estructura de control`` que se realiza bajo la siguiente sintaxis:
+
+```html
+<div *ngIf = "condicional">
+  Resultado de condicional
+</div>
+```
+
+- Es importante mantener las minusculas y mayusculas de la sintaxis. Un ejemplo sería el siguiente:
+
+```html
+  <h1>*ngIf</h1>
+  <input type="text" required  [(ngModel)]="persona.name">
+  <p *ngIf="persona.name === 'Fabian'">74999232</p>
+  <p *ngIf="persona.name === 'Julian'">55566644</p>
+```
+
+- Se define un **input** que será lo que nos ayude a comprar la condicional de `ngIf`. La cual, dentro de un parrafo '<p>' dice que si el nombre de la persona (persona.name) es igual a 'Fabian' mostrará un numero especifico para ese resultado, pero si se escribe 'Julian', el resultado será algo completamente distinto. Así funciona la conficional `ngIf`.
+

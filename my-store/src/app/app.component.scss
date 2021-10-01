@@ -42,3 +42,20 @@
         opacity: 1;
     }
 }
+.styles{
+    display: grid;
+    grid-template-columns: 2, 1fr;
+}
+.line-error{
+    height: 0;
+    border-bottom: 1px solid;
+    &.invalid{
+        transition: all linear .5s;
+        border-color: red;
+    }
+    &.valid{
+        transition: all linear .5s;
+        border-color: green;
+    }
+    
+}

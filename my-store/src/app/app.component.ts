@@ -8,6 +8,7 @@ import { Producto } from './product.model'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Fabian';
   age = 18;
   img = 'https://media.discordapp.net/attachments/516433396596211712/893168319966896168/ExT9Z8kWQAEHiak.png';
@@ -39,6 +40,11 @@ export class AppComponent {
   //ngFor Array
   emojis =[ '😂' , '🐦', '🐳','🌮', '💚']
   newName = '';
+  caja = {
+    width: 50,
+    height: 100,
+    background: 'red'
+  };
   Productos: Producto[] = [
 
     {
@@ -70,7 +76,7 @@ export class AppComponent {
     {
     nombre:'Gafas',
     precio: 2500,
-    imagen:'./assets/images/toy.jpg'
+    imagen:'./assets/images/glasses.jpg'
     },
     
 ];  

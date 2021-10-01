@@ -169,3 +169,36 @@ Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad e
   + `of -de donde se extraeran los datos-` 
   + `names -array creado con datos en su interior-`
   + `{{name}} -con el nombre de la variable y mediante String Interpolation se utiliza-` 
+
+- Por otra parte, los **arrays** pueden tener distintos tipos de datos como imagenes, numeros, letras, objetos. Para poder tener un "estandar" de los tipos de objetos que pueden haber dentro de un array, existen las `INTERFACES`.
++ A las **Interfaces** se les puede definir cual es el tipo de dato que tendrá cada objeto creado.
++ Para crear una interface primero se debe crear en el repositorio de `app` el componente `product.model.ts` la cual es una "clase" específica para nuestro array. 
+
+```TypeScript
+  export interface Producto{
+      nombre: string;
+      precio: Number;
+      imagen: string;
+}
+```
+- Para poder utilizar esta interfaz en el lugar donde se encuentra nuestro array, se debe exportar. Para ello, es necesario escribir `export` antes de la funcion para que se concidere "pública". En la clase donde está nuestro array, quedaría la importacion de la siguiente manera:
+
+```TypeScript
+  import { Producto } from './product.model'
+```
+
+- Luego para asignar nuestra interfaz a nuestro array, solo se debe indicar con `:`.
+
+
+```TypeScript
+
+    Productos: Producto[] = [
+    {
+    nombre:'El mejor juguete',
+    precio: 2000,
+    imagen:'./assets/images/toy.jpg'
+    }]
+```
+
+- Donde "Productos" es el nombre del Array y "Producto[]" es nuestra interfaz.
+

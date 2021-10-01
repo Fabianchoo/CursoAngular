@@ -134,4 +134,17 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
 ```
 
 - Se define un **input** que será lo que nos ayude a comprar la condicional de `ngIf`. La cual, dentro de un parrafo `<p>` dice que si el nombre de la persona (persona.name) es igual a 'Fabian' mostrará un numero especifico para ese resultado, pero si se escribe 'Julian', el resultado será algo completamente distinto. Así funciona la conficional `ngIf`.
+- A esta condicional se le pueden seguir agregando condicionales utilizando operadores logicos (OR, AND, NAND, entre otros).
 
+- Ademas, esta condicional se puede juntar con codigo JavaScript dentro de la sintaxis utilizando `<ng-template #nom_temp>`.
+
+```html
+  <p *ngIf="persona.name === 'Julian' && persona.age === 18; else myBlock">55566644</p>
+  <ng-template #myBlock>
+    <p>
+      Bloque de else
+    </p>
+  </ng-template>
+```
+
+Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad es igual a 18 años, va a mostrar '55566644', **pero mientras no sea ese resultado**, mostrará el template #myBlock, en sí el texto `Bloque de else`.

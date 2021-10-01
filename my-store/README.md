@@ -200,5 +200,25 @@ Esto quiere decir que si el nombre de la persona es igual a 'Julian' y su edad e
     }]
 ```
 
-- Donde "Productos" es el nombre del Array y "Producto[]" es nuestra interfaz.
+- Donde "Productos" es el nombre del Array y "Producto[]" es nuestra interfaz. Ahora si cualquier valor no coincide con el tipo de dato requerido para nuestro array, generará un alerta temprana de dato incorrecto.
+<hr>
 
+### Uso de *ngSwitch
+- ngSwitch sirve para realizar comparaciones o condiciones de una manera mas amena, en vez de anillar incontables `ngIf`. Para esto, solo se le debe pasar la variable con que se va a hacer match dentro del ngSwitch y las posibles respuestas con `ngSwitchCase = `. Cabe destacar que ngSwitch cuenta con una variable por defecto o sea, un `ngSwitchDefault` dondo se activa cuando no haya ningun match dentro de los case. Esto se representa de la siguiente manera:
+
+```HTML
+<h1>ngSwitch</h1>
+  <input type="text" required  [(ngModel)]="persona.name">
+  <div [ngSwitch] = "persona.name">
+    <p *ngSwitchCase="'Fabian'">La persona es Fabian</p>
+    <p *ngSwitchCase="'Julian'">La persona es Julian</p>
+    <p *ngSwitchCase="'Ricardo'">La persona es Ricardo</p>
+    <p *ngSwitchDefault>No hace match</p>
+  </div>
+```
+
+### Angular DevTools
+- es una extencion para navegadores de internet que permite la depuracion u analisis mas profundo respecto a las paginas o localhost desarrollados con Angular.
+
+<hr>
+## Clases de Organizacion y Css (16, 17, 18, 19)

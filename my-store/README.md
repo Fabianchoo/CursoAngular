@@ -133,5 +133,5 @@ Quiere decir que los parametros a utilizar se crean en Component.ts y se deben u
   <p *ngIf="persona.name === 'Julian'">55566644</p>
 ```
 
-- Se define un **input** que será lo que nos ayude a comprar la condicional de `ngIf`. La cual, dentro de un parrafo '<p>' dice que si el nombre de la persona (persona.name) es igual a 'Fabian' mostrará un numero especifico para ese resultado, pero si se escribe 'Julian', el resultado será algo completamente distinto. Así funciona la conficional `ngIf`.
+- Se define un **input** que será lo que nos ayude a comprar la condicional de `ngIf`. La cual, dentro de un parrafo `<p>` dice que si el nombre de la persona (persona.name) es igual a 'Fabian' mostrará un numero especifico para ese resultado, pero si se escribe 'Julian', el resultado será algo completamente distinto. Así funciona la conficional `ngIf`.
 

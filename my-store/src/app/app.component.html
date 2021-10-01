@@ -1,11 +1,52 @@
+
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="persona.name">
+<p class="message-error" [class.invalid] = "nameInput2.invalid">El campo es requerido</p>
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="persona.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">En este parrafo se modifica el estilo de manera directa dependiendo si el nameInput3 es valido o invalido</p>
+
+<div>
+  <div></div>
+  <div></div>
+</div>
+
+<hr>
+
+
+
+<h1>ngSwitch</h1>
+<input type="text" required  [(ngModel)]="persona.name">
+<div [ngSwitch] = "persona.name">
+<p *ngSwitchCase="'Fabian'">La persona es Fabian</p>
+<p *ngSwitchCase="'Julian'">La persona es Julian</p>
+<p *ngSwitchCase="'Ricardo'">La persona es Ricardo</p>
+<p *ngSwitchDefault>No hace match</p>
+</div>
+
+
+<h1>*ngFor Objs</h1>
+<div class = "products--grid">
+  <div *ngFor= "let Producto of Productos">
+    <img [src]="Producto.imagen" alt="imagen">
+    <h2>{{Producto.precio}}</h2>
+    <p>{{Producto.nombre}}</p>
+  </div>
+</div>
+
+
+<hr>
 <h1>*ngFor</h1>
+<input type="text" required  [(ngModel)]="newName">
+<button (click) = "addName()">Add name</button>
 <ul>
-  <li *ngFor = "let name of names">
-    {{name}}
+  <li *ngIf="emojis.length === 0">NO HAY EMOJIS</li>
+  <li *ngFor = "let name of emojis; index as i">
+    {{i}} {{name}}
+    <button (click)="delName(i)">Delete</button>
   </li>
 </ul>
-
-
 <hr>
 
 <h1>*ngIf</h1>
@@ -48,7 +89,7 @@
 <p>Nombre: {{persona.name}}</p>
 <input type="text" [value]="persona.name"(keyup) = "changeName($event)">
 <progress max = "100" [value] ="persona.age"></progress>
-<img [src]="persona.avatar">
+<img width="200" [src]="persona.avatar">
 <hr/>
 <h1>Hola mundo</h1>
 <h2>{{'Hola mundo '.repeat(5)}}</h2>
@@ -56,5 +97,5 @@
 
 <h3>Hola soy {{name}} y tengo {{age}} años</h3>
 
-<img src={{img}} alt="image">
+<img width="200" src={{img}} alt="image">
 <hr>

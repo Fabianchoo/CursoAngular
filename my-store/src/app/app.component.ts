@@ -1,4 +1,6 @@
+import { BoundText } from '@angular/compiler/src/render3/r3_ast';
 import { Component } from '@angular/core';
+import { Producto } from './product.model'
 
 @Component({
   selector: 'app-root',
@@ -35,5 +37,50 @@ export class AppComponent {
   }
 
   //ngFor Array
-  names: String [] = ['Nicolas', 'Julian', 'Fabian'];
+  emojis =[ '😂' , '🐦', '🐳','🌮', '💚']
+  newName = '';
+  Productos: Producto[] = [
+
+    {
+    nombre:'El mejor juguete',
+    precio: 2000,
+    imagen:'./assets/images/toy.jpg',
+    category: 'todo'
+    },
+    {
+    nombre:'Bicicleta casi nueva',
+    precio: 55000,
+    imagen:'./assets/images/bike.jpg'
+    },
+    {
+    nombre:'Album',
+    precio: 500,
+    imagen:'./assets/images/album.jpg'
+    },
+    {
+    nombre:'Mis libros',
+    precio: 30000,
+    imagen:'./assets/images/books.jpg'
+    },
+    {
+    nombre:'Casa para perro',
+    precio: 50000,
+    imagen:'./assets/images/house.jpg'
+    },
+    {
+    nombre:'Gafas',
+    precio: 2500,
+    imagen:'./assets/images/toy.jpg'
+    },
+    
+];  
+
+
+  addName(){
+    this.emojis.push(this.newName);
+    this.newName = '';
+  }
+  delName(index: number){
+    this.emojis.splice(index, 1);
+  }
 }

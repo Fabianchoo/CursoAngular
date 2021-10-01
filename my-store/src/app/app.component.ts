@@ -17,4 +17,23 @@ export class AppComponent {
     age: 18,
     avatar: 'https://media.discordapp.net/attachments/516433396596211712/893168319966896168/ExT9Z8kWQAEHiak.png'
   }
+
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
+  PlusButton(){
+    this.persona.age += 1;
+  }
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  changeName(event : Event){
+    const element = event.target as HTMLInputElement;
+    this.persona.name = element.value;
+  }
+
+  //ngFor Array
+  names: String [] = ['Nicolas', 'Julian', 'Fabian'];
 }

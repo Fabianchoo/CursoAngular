@@ -1,7 +1,52 @@
+<h1>*ngFor</h1>
+<ul>
+  <li *ngFor = "let name of names">
+    {{name}}
+  </li>
+</ul>
 
-<h1>Propiedades</h1>
+
+<hr>
+
+<h1>*ngIf</h1>
+<input type="text" required  [(ngModel)]="persona.name">
+<input type="number" required  [(ngModel)]="persona.age">
+<p *ngIf="persona.name === 'Fabian'">74999232</p>
+
+<p *ngIf="persona.name === 'Julian' && persona.age === 18; else myBlock">55566644</p>
+<ng-template #myBlock>
+  <p>
+    Bloque de else
+  </p>
+</ng-template>
+<hr>
+
+<h1>NgModel</h1>
+<p>Nombre: {{persona.name}}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="persona.name">
+<p>Valid: {{nameInput.valid}}</p>
+
+<p>Edad: {{persona.age}}</p>
+<input type="number" max="18" min="10" #ageInput="ngModel" [(ngModel)]="persona.age">
+<p>Valid: {{ageInput.valid}}</p>
+<hr>
+<h1>EVENTOS</h1>
 <button [disabled] = "btnDisabled">Enviar</button>
-<input type="text" [value]="persona.name">
+<button (click) = "toggleButton()">Toggle Button</button>
+<p>Edad {{persona.age}}</p>
+<button (click) = "PlusButton()">+</button>
+
+<!--Otros eventos que se pueden escuchar clase 9-->
+<div class="box" (scroll) = "onScroll($event)">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nihil beatae quidem placeat numquam commodi sequi doloribus veniam iusto quod, necessitatibus harum totam cum unde accusamus repudiandae quas iste. Modi.
+  </p>
+</div>
+<hr>
+<h1>Propiedades</h1>
+
+<p>Nombre: {{persona.name}}</p>
+<input type="text" [value]="persona.name"(keyup) = "changeName($event)">
 <progress max = "100" [value] ="persona.age"></progress>
 <img [src]="persona.avatar">
 <hr/>
@@ -12,3 +57,4 @@
 <h3>Hola soy {{name}} y tengo {{age}} años</h3>
 
 <img src={{img}} alt="image">
+<hr>

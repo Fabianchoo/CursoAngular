@@ -26,8 +26,8 @@ Para elegir el puerto especifico en el que quieres que se aloje el servidor en l
 ### - String Interpolation
 - Es la forma en que ``"{ { } }"`` puedes realizar una operacion y obtener un resultado con ella con funciones de TypeScript o JavaScript.
 
-**- EJ: Escribir "hola mundo"**
-- Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
+- EJ: Escribir "hola mundo"
++ Una forma normal de escribir un hola mundo en HTML sería de la siguiente manera:
     + `<h1>hola mundo<h1>`
 
     Pero una forma de hacerlo con TypeScript para utilizarlo dentro de alguna funcion sería:

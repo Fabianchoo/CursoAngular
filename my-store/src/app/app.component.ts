@@ -13,6 +13,11 @@ export class AppComponent {
   age = 18;
   img = 'https://media.discordapp.net/attachments/516433396596211712/893168319966896168/ExT9Z8kWQAEHiak.png';
   btnDisabled = true;
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
 
   //Objeto para realizar la Property Binding
   persona = {
@@ -88,5 +93,9 @@ export class AppComponent {
   }
   delName(index: number){
     this.emojis.splice(index, 1);
+  }
+  
+  OnRegister(){
+    console.log(this.register);
   }
 }
